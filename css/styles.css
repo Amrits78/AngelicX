@@ -1,0 +1,430 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #000;
+    color: #fff;
+    line-height: 1.6;
+}
+
+/*header*/
+header {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: rgba(0, 0, 0, 0.9);
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 10;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+    position: relative; /* Remove fixed positioning */
+}
+
+header .logo img {
+    height: 35px;
+    margin-left: 100px;
+    margin-top: 10px;
+}
+
+header .sign-in {
+    margin-left: auto;
+}
+
+/*sign in */
+.sign-in-button {
+    padding: 10px 20px;
+    background-color: #e50914;
+    color: #fff;
+    text-decoration: none;
+    font-size: 1rem;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.sign-in-button:hover {
+    background-color: #b20710;
+}
+
+/* Hero Section */
+/* Hero Section */
+/* Hero Section */
+#hero {
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #fff;
+}
+
+/* Slideshow Container */
+.slideshow {
+    width: 100vw;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+/* Track that slides all images */
+.slideshow-track {
+    display: flex;
+    width: 500%; /* Wide enough for all images + cloned image */
+    height: 100%;
+    transition: transform 1s ease-in-out;
+}
+
+/* Individual Slide */
+.slide {
+    width: 100vw;
+    height: 100%;
+    object-fit: cover;
+    flex-shrink: 0;
+}
+
+
+/* Keep hero text content centered */
+.hero-content {
+    position: absolute;
+    z-index: 1;
+    max-width: 80%;
+    text-align: center;
+    background: rgba(0, 0, 0, 0); /* Optional overlay for better readability */
+    padding: 20px;
+    border-radius: 10px;
+    
+}
+
+
+
+
+#hero::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: -1;
+}
+
+
+
+
+
+
+/* Hero Section */
+
+
+.hero-content h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.hero-content h2 {
+    font-size: 2.2rem;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.hero-content p {
+    font-size: 1.5rem;
+    margin-bottom: 30px;
+}
+
+#hero .hero-content p {
+    font-size: 1rem; /* Adjust the size as needed */
+    margin-top: 30px;
+    margin-bottom: 10px; /* Optional: Adjust spacing */
+}
+
+#hero .hero-content form {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+#hero .hero-content input[type="email"] {
+    padding: 10px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px 0 0 5px;
+    outline: none;
+    width: 300px;
+}
+
+#hero .hero-content button {
+    padding: 15px 30px; /* Increase padding for a larger button */
+    font-size: 1.2rem;  /* Increase font size */
+    background-color: #e50914;
+    color: #fff;
+    border: none;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#hero .hero-content button:hover {
+    background-color: #b20710;
+}
+
+
+/* Featured Content Section */
+#featured {
+    padding: 50px 20px;
+    background-color: black;
+    text-align: center;
+}
+
+#featured h2 {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+}
+
+#featured h3 {
+    font-size: 2rem;
+    margin-bottom: 30px;
+}
+
+.carousel-container {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.carousel {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    will-change: transform;
+}
+
+.carousel-item {
+    position: relative; /* Ensure the number is positioned relative to the item */
+    flex: 0 0 20%; /* Width for each item */
+    box-sizing: border-box;
+    padding: 10px;
+    text-align: center;
+}
+
+.carousel-item .item-number {
+    position: absolute;
+    bottom: -12px; /* Align at the bottom */
+    left: 10px; /* Align at the left */
+    color: black; /* Black text color */
+    font-size: 7rem; /* Large size */
+    font-weight: bold; /* Bold text */
+    z-index: 2; /* Ensure it appears above the image */
+    -webkit-text-stroke: 2px white; /* White border around text */
+    text-shadow: none; /* Remove shadow */
+}
+.carousel-item img {
+    width: 80%;
+    border-radius: 10px;
+}
+
+.carousel-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgb(47, 47, 47);
+    color: white;
+    border: none;
+    padding: 15px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 2rem; /* Larger size for chevron */
+  
+    z-index: 2;
+    transition: all 0.3s ease-in-out;
+}
+
+.carousel-button:hover {
+    background-color: rgb(70, 70, 70);
+}
+
+.carousel-button.next {
+    right: -20px;
+}
+
+.carousel-button.prev {
+    left: -20px;
+}
+
+
+
+
+
+
+
+/* Testimonials Section */
+#testimonials {
+    padding: 50px 20px;
+    background-color: black;
+    text-align: center;
+}
+
+#testimonials h2 {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+}
+
+.testimonial {
+    max-width: 600px;
+    margin: 0 auto 20px;
+    font-style: italic;
+    color: #ccc;
+}
+
+.testimonial span {
+    display: block;
+    margin-top: 10px;
+    color: #e50914;
+}
+
+
+#faq {
+    padding: 50px 20px;
+    background-color: #191919;
+    color: #fff;
+    text-align: left;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+#faq h2 {
+    font-size: 1.5rem;
+    margin-bottom: 30px;
+    text-align: left;
+}
+
+.faq-item {
+    margin-bottom: 20px;
+    border-bottom: 1px solid #333;
+    padding-bottom: 10px;
+}
+
+.faq-question {
+    background: none;
+    color: #fff;
+    border: none;
+    font-size: 1.2rem;
+    text-align: left;
+    width: 100%;
+    padding: 10px;
+    cursor: pointer;
+    outline: none;
+    transition: color 0.3s;
+}
+
+.faq-question:hover {
+    color: #e50914;
+}
+
+.faq-answer {
+    display: none;
+    font-size: 1rem;
+    padding: 10px 0;
+    color: #ccc;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+#get-started {
+    padding: 50px 20px;
+    text-align: center;
+    background-color: black;
+    color: #fff;
+}
+
+#get-started h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    font-family: 'Poppins', sans-serif;
+}
+
+#get-started form {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+#get-started input[type="email"] {
+    padding: 10px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px 0 0 5px;
+    outline: none;
+    width: 300px;
+}
+
+#get-started button {
+    padding: 10px 30px;
+    font-size: 1.2rem;
+    background-color: #e50914;
+    color: #fff;
+    border: none;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#get-started button:hover {
+    background-color: #b20710;
+}
+
+
+
+
+
+
+/* Footer */
+footer {
+    padding: 20px;
+    background-color: #000;
+    text-align: center;
+}
+
+footer p {
+    margin-bottom: 10px;
+}
+
+footer ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+footer ul li a {
+    text-decoration: none;
+    color: #fff;
+    transition: color 0.3s;
+}
+
+footer ul li a:hover {
+    color: #e50914;
+}

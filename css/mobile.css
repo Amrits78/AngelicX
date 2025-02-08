@@ -1,0 +1,227 @@
+/* Mobile responsiveness for smaller screens */
+@media (max-width: 768px) {
+
+    /* Header adjustments */
+    header {
+        display: flex;
+        justify-content: space-between;
+        /* Align items to the left and right */
+        align-items: center;
+        padding: 10px 15px;
+        /* Adjust padding for mobile */
+    }
+
+    header .logo {
+        display: block;
+        margin: 0;
+        /* Remove any centering margin */
+    }
+
+    header .logo img {
+        height: 25px;
+        margin-left: 0px;
+        margin-top: 10px;
+    }
+
+    header .sign-in {
+        margin: 0;
+    }
+
+    header .sign-in-button {
+        font-size: 0.9rem;
+        /* Adjust size for mobile */
+        padding: 8px 15px;
+    }
+
+    
+    /* Hero Section */
+    #hero h2 {
+        font-size: 1.4rem;
+    }
+
+    #hero p {
+        font-size: 0.8rem;
+    }
+
+    /* Stack Email Input and Get Started Button */
+    #hero .hero-content {
+        display: flex;
+        flex-direction: column;
+        /* Stack elements vertically */
+        align-items: center;
+        /* Center align all elements */
+    }
+
+    #hero .hero-content input[type="email"] {
+        width: 100%;
+        /* Full width for the input field */
+        margin-bottom: 10px;
+        /* Add spacing below the input field */
+        padding: 10px;
+        /* Add padding for a better look */
+        font-size: 1rem;
+        /* Adjust font size */
+    }
+
+    /* Get Started Button Adjustments for Mobile */
+#hero .hero-content button,
+#get-started button {
+    padding: 8px 15px; /* Smaller padding */
+    font-size: 1rem;   /* Smaller font size */
+    width: 150px;       /* Ensure button doesn't stretch unnecessarily */
+    border-radius: 5px; /* Adjust corner radius */
+    
+}
+
+
+
+
+
+    /* Adjust the carousel to show 3 items */
+    .carousel-item {
+        flex: 0 0 33.33%;
+        /* Show 3 items per view */
+    }
+
+    .carousel-item img {
+        width: 100%;
+        /* Ensure images are responsive */
+    }
+
+    /* Position Next and Prev buttons next to images */
+    .carousel-button {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        background-color: rgba(0, 0, 0, 0.5);
+        color: white;
+        border: none;
+        padding: 10px 15px;
+        /* Adjust padding for smaller screens */
+        font-size: 1.5rem;
+        /* Slightly smaller chevron size */
+        border-radius: 5px;
+        /* Keep rounded corners */
+        z-index: 2;
+        cursor: pointer;
+        transition: background-color 0.3s;
+    }
+
+    .carousel-button.next {
+        right: -10px;
+        /* Keep the button close to the right */
+    }
+
+    .carousel-button.prev {
+        left: -10px;
+        /* Keep the button close to the left */
+    }
+
+    .carousel-button:hover {
+        background-color: rgba(70, 70, 70);
+    }
+
+    /* Adjust carousel container to ensure no overflow */
+    .carousel-container {
+        overflow: hidden;
+        /* Prevent horizontal scroll issues */
+        position: relative;
+        width: 100%;
+    }
+
+
+
+    .carousel-item .item-number {
+        position: absolute;
+        bottom: -12px;
+        /* Align at the bottom */
+        left: 10px;
+        /* Align at the left */
+        color: black;
+        /* Black text color */
+        font-size: 3rem;
+        /* Large size */
+        font-weight: bold;
+        /* Bold text */
+        z-index: 2;
+        /* Ensure it appears above the image */
+        -webkit-text-stroke: 2px white;
+        /* White border around text */
+        text-shadow: none;
+        /* Remove shadow */
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+    #get-started button {
+        padding: 5px 10px;
+        font-size: 1.2rem;
+        background-color: #e50914;
+        color: #fff;
+        border: none;
+        border-radius: 0 5px 5px 0;
+        cursor: pointer;
+        transition: background-color 0.3s;
+    }
+
+
+
+
+
+
+
+
+    /* Testimonials Section */
+    #testimonials h2 {
+        font-size: 1.5rem;
+    }
+
+    .testimonial {
+        font-size: 0.9rem;
+    }
+
+    /* FAQ Section */
+    #faq h2 {
+        font-size: 1.2rem;
+    }
+
+    .faq-question {
+        font-size: 1rem;
+    }
+
+    .faq-answer {
+        font-size: 0.9rem;
+    }
+
+    /* Get Started Section */
+    #get-started form {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    #get-started input[type="email"] {
+        width: 100%;
+    }
+
+    #get-started button {
+        width: 100%;
+        border-radius: 5px;
+        /* Fully rounded button */
+    }
+
+    /* Footer adjustments */
+    footer ul {
+        flex-direction: column;
+        gap: 10px;
+        /* Adjust gap for better spacing */
+    }
+}

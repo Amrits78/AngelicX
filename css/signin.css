@@ -1,0 +1,258 @@
+/* General Reset */
+
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #000;
+    color: #fff;
+    line-height: 1.6;
+}
+
+/*header*/
+header {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: rgba(0, 0, 0, 0.9);
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 10;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+    position: relative; /* Remove fixed positioning */
+}
+
+header .logo img {
+    height: 25px;
+    margin-left: 5px;
+    margin-top: 10px;
+}
+
+
+
+
+/* Hero Section */
+#hero {
+    height: 100vh;
+    background: url('/media/slideshow/0.jpg') no-repeat center center/cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #fff;
+    position: relative;
+    z-index: 1;
+}
+
+#hero::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.312);
+    z-index: -1;
+}
+
+.hero-content h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.hero-content h2 {
+    font-size: 2.2rem;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.hero-content p {
+    font-size: 1.5rem;
+    margin-bottom: 30px;
+}
+
+#hero .hero-content p {
+    font-size: 1rem; /* Adjust the size as needed */
+    margin-top: 30px;
+    margin-bottom: 10px; /* Optional: Adjust spacing */
+}
+
+/* Footer */
+footer {
+    padding: 20px;
+    background-color: #000;
+    text-align: center;
+}
+
+footer p {
+    margin-bottom: 10px;
+}
+
+footer ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+footer ul li a {
+    text-decoration: none;
+    color: #fff;
+    transition: color 0.3s;
+}
+
+footer ul li a:hover {
+    color: #e50914;
+}
+
+
+
+/* Forgot Password Link */
+.forgot-password {
+    display: block; /* Ensure it appears on its own line */
+    text-align: center; /* Align the link to the right */
+    margin-top: 15px; /* Add a small gap above the link */
+    font-size: 0.9rem; /* Slightly smaller font size */
+    color: white; /* Netflix-style gray color */
+    text-decoration: none; /* Remove underline */
+}
+
+.forgot-password:hover {
+    color: #fff; /* Change color to white on hover */
+    text-decoration: underline; /* Add underline on hover */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Login Container */
+.login-container {
+    width: 100%;
+    max-width: 400px;
+    padding: 20px;
+}
+
+.login-box {
+    background-color: #0e0e0ec9;
+    padding: 40px 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    text-align: left;
+}
+
+.login-box h1 {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+}
+
+/* Form Styles */
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 12px 15px;
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+.form-group input:focus {
+    outline: none;
+    border: 1px solid #e50914;
+}
+
+.login-button {
+    width: 100%;
+    padding: 12px;
+    background-color: #e50914;
+    color: #fff;
+    font-size: 1.2rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.login-button:hover {
+    background-color: #f6121d;
+}
+
+/* Help Links */
+.help-links {
+    display: flex;
+    justify-content: space-between;
+    margin: 15px 0;
+    font-size: 0.9rem;
+    color: white;
+}
+
+.help-links a {
+    color: #b3b3b3;
+    text-decoration: none;
+}
+
+.help-links a:hover {
+    text-decoration: underline;
+}
+
+/* Sign Up Prompt */
+.signup-prompt {
+    margin-top: 20px;
+    font-size: 1rem;
+}
+
+.signup-prompt a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.signup-prompt p {
+    color: #a9a9a9;
+    text-decoration: none;
+    
+}
+.signup-prompt a:hover {
+    text-decoration: underline;
+}
+
+/* Disclaimer */
+.disclaimer {
+    margin-top: 20px;
+    font-size: 0.1rem;
+    color: #b3b3b3;
+    line-height: 1.4;
+}
+
+
+
+
+.disclaimer a {
+    color: rgb(9, 9, 195);
+    text-decoration: none;
+}
