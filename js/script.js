@@ -120,3 +120,20 @@ document.addEventListener('DOMContentLoaded', function () {
         item.appendChild(number);
     });
 });
+
+document.addEventListener('DOMContentLoaded', function () {
+    const waitlistForms = document.querySelectorAll('#get-started-form');
+
+    waitlistForms.forEach(form => {
+        form.addEventListener('submit', function (e) {
+            e.preventDefault(); // Prevent form from actually submitting
+            const emailInput = form.querySelector('input[type="email"]');
+            const email = emailInput.value.trim();
+
+            if (email) {
+                // You can add your email validation or API call here if needed
+                window.location.href = 'Thanks/index.html'; // Redirect to thank you page
+            }
+        });
+    });
+});
