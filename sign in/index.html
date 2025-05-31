@@ -73,6 +73,23 @@
     </footer>
 
     <script src="/js/script.js"></script>
+    <script>
+document.addEventListener('DOMContentLoaded', function () {
+    const loginForm = document.querySelector('.login-box form');
+
+    if (loginForm) {
+        loginForm.addEventListener('submit', function (e) {
+            e.preventDefault();
+            const email = loginForm.querySelector('input[type="email"]').value.trim();
+            const password = loginForm.querySelector('input[type="password"]').value.trim();
+
+            if (email && password) {
+                window.location.href = '/Thanks/index.html';
+            }
+        });
+    }
+});
+</script>
 </body>
 
 </html>
